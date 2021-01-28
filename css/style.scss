@@ -77,11 +77,24 @@ body{
     width: 10%
 }*/
 
+.containerFromStop{
+    width: 100%;
+
+    .fromStop{
+        display: flex;
+        align-items: left;
+        justify-content: left;
+        color: white;
+        font-size: 50px;
+        text-align: center;
+        padding: 30px;
+    }
+}
 
 .timetable{
     color: black;
     font-size: 22px;
-    margin: 100px 15px 0 15px;
+    margin: 20px 15px 0 15px;
 
     .depElement{
         background-color: rgb(209, 209, 209);
