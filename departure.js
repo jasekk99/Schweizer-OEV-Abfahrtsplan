@@ -11,11 +11,13 @@ fetch('https://transport.opendata.ch/v1/stationboard?station='+stationQuery)
     // Determine what Category a the scheduled vehicle is
     var lineCategoryPrepare = "????"
     function whatCategory(lineCategory){
-        if (lineCategory == "B"){
-            lineCategoryPrepare = "Bus"
-        }
-        if (lineCategory == "T"){
-            lineCategoryPrepare = "Tram"
+        switch(lineCategory){
+            case "B":
+                lineCategoryPrepare = "Bus";
+                break;
+            case "T":
+                lineCategoryPrepare = "Tram";
+                break;
         }
         return lineCategoryPrepare
     }
@@ -30,9 +32,10 @@ fetch('https://transport.opendata.ch/v1/stationboard?station='+stationQuery)
 
         whatCategory(lineCategory);
 
-        document.querySelector(".timetable").innerHTML += "<div class=depElement><div class=line"+lineNumber+" line>" + lineNumber + "</div>"+
+        document.querySelector(".timetable").innerHTML += "<div class='depElement'><div class='line line"+lineNumber+" "+lineCategoryPrepare+"'>" + lineNumber + "</div>"+
         "<br>" + toStop + "<br>" + departureTimeTrim + "<br>" + lineCategoryPrepare + "</div><br>";
         document.querySelector(".fromStop").innerHTML = "From: " + stationQuery;
+        
     }
 })
 
