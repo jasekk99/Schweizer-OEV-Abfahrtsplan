@@ -484,4 +484,3 @@ StationClock.prototype.strokeSymmetricPolygon = function(context, color, points,
     context.lineWidth = width * this.radius;
     context.stroke();
 };
-

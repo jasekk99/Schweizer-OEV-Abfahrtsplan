@@ -1,4 +1,4 @@
-let stationQuery = 'Riehen, Weilstrasse'
+
 
 fetch('https://transport.opendata.ch/v1/stationboard?station='+stationQuery)
 .then(response => response.json())

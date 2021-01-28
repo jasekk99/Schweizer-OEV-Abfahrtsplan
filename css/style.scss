@@ -27,10 +27,9 @@ body{
 
 #clock{
     padding: 20px 0 20px 0;
-    font-size: 50px;
-    position: fixed;
-    top: 0;
-    left: 88%;
+    bottom: 10%;
+    float: right;
+    display: flex;
 }
 @media screen and (max-width: 2400px){
     #clock{

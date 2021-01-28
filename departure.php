@@ -12,15 +12,25 @@
 </head>
 <body>
     
-    <div class="containerFromStop"><div class="fromStop" id="fromStop"></div></div>
+    <div class="containerFromStop">
 
-    <div>
-        <canvas id="clock" width="300" height="300">
+        <div class="fromStop" id="fromStop"></div>
+        
+        <!--<canvas id="clock" width="150" height="150">
             Fehlermeldung       
-        </canvas>
+        </canvas>-->
     </div>
 
+
+        
+
+
     <div class="timetable"></div>
+
+    <script>
+        var stationQuery = '<?php echo $_GET['station'] ?>';
+    </script>
+
     <script src="departure.js"></script>
 
     <a href="#fromStop"><button class="goToTop">Go to top ↑</button></a>
