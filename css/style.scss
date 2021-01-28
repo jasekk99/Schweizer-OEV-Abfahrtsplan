@@ -12,6 +12,7 @@ html{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
     /* USE FOR HIDING SCROLLBAR
     overflow: scroll;
     overflow-x: hidden;
@@ -87,41 +88,57 @@ body{
         color: white;
         font-size: 50px;
         text-align: center;
-        padding: 30px;
+        padding: 40px;
     }
 }
 
 .timetable{
     color: black;
     font-size: 22px;
-    margin: 20px 15px 0 15px;
+    margin: 10px 15px 0 15px;
 
     .depElement{
         background-color: rgb(209, 209, 209);
-        padding: 20px;
+        padding: 15px;
         border-radius: 5px;
-
+        border: solid 2px black;
     }
 }
 
-.line2,.line6,.line7300,.line7301{
+.line{
     border-radius: $lineNumDefaultBorder;
     text-align: center;
     color: white;
+    padding: 10px;
+    width: 2ch;
 }
 
 .line2{
-    background-color: orange;
-    padding: 10px;
-    width: 17px;
+    background-color: #ab8248;
 }
 .line6{
-    background-color: green;
-    padding: 10px;
-    width: 17px;
+    background-color: #0069b4;
 }
-.line7300,.line7301{
-    background-color: red;
+.Bus{
+    background-color: grey;
     padding: 10px;
-    width: 50px;
+    width: 5ch;
+}
+
+a{
+    text-decoration: none;
+}
+.goToTop{
+    background: #198754;
+    color: white;
+    padding: .375rem .75rem;
+    border-radius: .25rem;
+    border: none;
+    margin: 0 0 15px 15px;
+    transition: background-color 200ms ease;
+
+    &:hover{
+        background-color: #157347;
+        
+    }
 }
